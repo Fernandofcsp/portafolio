@@ -24,7 +24,7 @@ npm run dev
 ## Despliegue 📦
 npm run deploy 
 
-[https://projectingsoftvicguitar.free.nf/](https://fernandofcsp.github.io/portafolio/)
+https://fernandofcsp.github.io/portafolio/
 
 ## Construido con 🛠️
 *React + Typescript + Vite
