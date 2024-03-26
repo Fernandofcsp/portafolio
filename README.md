@@ -18,6 +18,7 @@ Navegador
 ## Instalación 🔧
 Ir a la ruta del proyecto en command prompt y ejecutar.
 npm -i 
+
 npm run dev
 
 ## Construido con 🛠️
