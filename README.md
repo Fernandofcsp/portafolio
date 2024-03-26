@@ -17,16 +17,21 @@ Navegador
 
 ## Instalación 🔧
 Ir a la ruta del proyecto en command prompt y ejecutar.
+
 npm -i 
 
 npm run dev
 
 ## Construido con 🛠️
-React + Typescript + Vite
-Html
-Tailwind
-react-icons
-react-toastify
+*React + Typescript + Vite
+
+*Html
+
+*Tailwind
+
+*react-icons
+
+*react-toastify
 
 ## Autor ✒️
 * **Fernando Sandoval** - *Codificación* - [fernandofcsp](https://github.com/fernandofcsp)
