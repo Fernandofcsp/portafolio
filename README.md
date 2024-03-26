@@ -1,5 +1,4 @@
-# Título del Proyecto
-Web Portfolio
+# Web Portfolio
 
 ## Comenzando 🚀
 *Sitio web de projectos mejorado con diseño responsivo para una visualización óptima en todos los dispositivos.
