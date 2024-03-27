@@ -8,12 +8,14 @@ export default defineConfig({
   plugins: [
     react(),
   ],
+  base: "/portafolio/",
   css: {
     postcss: {
       plugins: [
         tailwindcss,
         autoprefixer,
       ],
+      
     },
   },
 });

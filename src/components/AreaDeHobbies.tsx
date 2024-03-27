@@ -2,7 +2,9 @@ import { FunctionComponent } from "react";
 import { GiAutoRepair } from "react-icons/gi";
 import { FaBook } from "react-icons/fa";
 import { TbGoGame } from "react-icons/tb";
-
+import { FaHeadphones } from "react-icons/fa";
+import { FaTv } from "react-icons/fa";
+import { FaCamera } from "react-icons/fa";
 const AreaDeHobbies: FunctionComponent = () => {
   return (
     <section className="mb-4 mt-10 mr-4 ml-4 self-stretch relative text-center text-3xl font-raleway">
@@ -20,19 +22,11 @@ const AreaDeHobbies: FunctionComponent = () => {
             <span className="text-lg font-bold">Jugar juegos de mesa</span>
           </div>
           <div className="m-2 rounded-md bg-gray-200 p-6 flex flex-col items-center justify-center">
-            <img
-              className="w-8 h-8 mb-2"
-              src="/headphones-black-24dp-1.svg"
-              alt="Icono de música"
-            />
+            <FaHeadphones className="w-8 h-8 mb-2" />
             <span className="text-lg font-bold">Escuchar música</span>
           </div>
           <div className="m-2 rounded-md bg-gray-200 p-6 flex flex-col items-center justify-center">
-            <img
-              className="w-8 h-8 mb-2"
-              src="/tv-black-24dp-1.svg"
-              alt="Icono de series"
-            />
+            <FaTv className="w-8 h-8 mb-2" />
             <span className="text-lg font-bold">Ver series</span>
           </div>
           <div className="m-2 rounded-md bg-gray-200 p-6 flex flex-col items-center justify-center">
@@ -42,11 +36,7 @@ const AreaDeHobbies: FunctionComponent = () => {
             </span>
           </div>
           <div className="m-2 rounded-md bg-gray-200 p-6 flex flex-col items-center justify-center">
-            <img
-              className="w-8 h-8 mb-2"
-              src="/photo-camera-black-24dp-1.svg"
-              alt="Icono de fotografía"
-            />
+            <FaCamera className="w-8 h-8 mb-2" />
             <span className="text-lg font-bold">Tomar fotos</span>
           </div>
         </div>

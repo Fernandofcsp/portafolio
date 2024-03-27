@@ -1,5 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
-
+import firma from "../../public/assets/images/firma.png";
 export type SobreType = {
   /** Style props */
   propPadding?: CSSProperties["padding"];
@@ -60,8 +60,9 @@ const Sobre: FunctionComponent<SobreType> = ({
         <img
           className="w-[140px] h-[52px] relative bottom-0 object-cover mt-4"
           loading="lazy"
+          style={{ filter: "grayscale(100%)"}}
           alt=""
-          src="/image-4@2x.png"
+          src={firma}
         />
       </div>
     </section>

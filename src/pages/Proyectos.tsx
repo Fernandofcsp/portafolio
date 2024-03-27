@@ -1,5 +1,10 @@
 import Experiencia from "../components/Experiencia";
 import Layout from "../components/Layout";
+import encryptText from "../../public/assets/proyects/encryptText.png"
+import guitarPage from "../../public/assets/proyects/guitarPage.png"
+import unityGame from "../../public/assets/proyects/juegoPlataformas2.png"
+import financeBond from "../../public/assets/proyects/financeBond.png"
+
 export const Proyectos = () => {
 
     return (
@@ -8,19 +13,8 @@ export const Proyectos = () => {
           <h2 className="m-4 w-[248px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
             Experiencia profesional
           </h2>
-
           <Experiencia
-            infoCard="/assets/proyects/encryptText.png"
-            titleDescription="Encriptador de texto"
-            propWidth="auto"
-            propHeight="320px"
-            propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
-            imagePosition="left" // right  | left
-            repoLink="https://github.com/Fernandofcsp/Text-Encryption"
-            demoLink="https://fernandofcsp.github.io/Text-Encryption/"
-          />
-          <Experiencia
-            infoCard="/assets/proyects/guitarPage.png"
+            infoCard={guitarPage}
             titleDescription="Pagina web de cursos"
             propWidth="auto"
             propHeight="320px"
@@ -29,6 +23,38 @@ export const Proyectos = () => {
             repoLink="https://github.com/Fernandofcsp/guitarPage"
             demoLink="https://projectingsoftvicguitar.free.nf/"
           />
+          <Experiencia
+            infoCard={unityGame}
+            titleDescription="Juego de plataformas en Unity"
+            propWidth="auto"
+            propHeight="500px"
+            propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+            imagePosition="right" // right  | left
+            repoLink="https://github.com/Fernandofcsp/juegoPlataformasUnity"
+            demoLink="/portafolio/#/unityGame"
+          />
+          <Experiencia
+            infoCard={encryptText}
+            titleDescription="Encriptador de texto"
+            propWidth="auto"
+            propHeight="320px"
+            propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+            imagePosition="left" // right  | left
+            repoLink="https://github.com/Fernandofcsp/Text-Encryption"
+            demoLink="https://fernandofcsp.github.io/Text-Encryption/"
+          />
+          
+          <Experiencia
+            infoCard={financeBond}
+            titleDescription="ERP Finance Bond"
+            propWidth="auto"
+            propHeight="320px"
+            propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+            imagePosition="right" // right  | left
+            repoLink="https://github.com/Fernandofcsp/modular_front"
+            demoLink="https://drive.google.com/file/d/1EMDIiTy39fNeLLnsh5yP9rUTBp0sHzV4/view?usp=drive_link"
+          />
+          
         </div>
         </Layout>
     );

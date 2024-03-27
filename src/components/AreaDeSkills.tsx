@@ -10,7 +10,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
-
+import { BsFiletypeCss } from "react-icons/bs";
 const AreaDeSkills: FunctionComponent = () => {
   return (
     <section className="mb-4 mt-10 mr-4 ml-4 self-stretch relative text-center text-3xl font-raleway">
@@ -40,11 +40,7 @@ const AreaDeSkills: FunctionComponent = () => {
             <b className="text-base font-raleway">React</b>
           </div>
           <div className="m-2 rounded-md bg-preto-branco p-6 flex flex-col items-center justify-center">
-            <img
-              className="w-[22px] h-[35.5px] relative overflow-hidden shrink-0"
-              alt=""
-              src="/cssfile-1.svg"
-            />
+            <BsFiletypeCss className="w-10 h-10 mb-2" />
             <b className="text-base font-raleway">CSS</b>
           </div>
           <div className="m-2 rounded-md bg-preto-branco p-6 flex flex-col items-center justify-center">

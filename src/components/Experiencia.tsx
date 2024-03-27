@@ -43,6 +43,8 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
       height: height,
       objectFit: "contain",
       borderRadius: "10px",
+      border: "2px solid #2d3748", // Borde de color negro
+      
       
     };
   }, [propWidth, propHeight]);
@@ -56,6 +58,7 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
       className={`mq750:flex-col  ${contenedorClases}`}
       style={experienciaStyle}
     >
+      <div className="bordered border-black">
       <img
         className="object-cover"
         loading="lazy"
@@ -63,6 +66,8 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
         src={infoCard}
         style={imagenStyle}
       />
+      </div>
+      
       <div className="flex flex-col items-start justify-center gap-4 md:w-1/2">
         <b className="relative">{titleDescription}</b>
         <div className="flex flex-row justify-start gap-4">

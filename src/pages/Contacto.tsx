@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "../components/Layout";
-
+import mailbox from "../../public/assets/images/mailbox.png";
 interface Expresiones {
   [key: string]: RegExp;
 }
@@ -88,7 +88,7 @@ export const Contacto = () => {
           <div className="">
             <img
               className=" w-[70%] mq750:w-[50%] mq450:w-[30%] h-auto"
-              src="/assets/images/mailbox.png"
+              src={mailbox}
               alt="Teléfono"
             />
           </div>

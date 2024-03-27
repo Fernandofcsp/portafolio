@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import menu from "../../public/assets/icons/menu.png";
 import { useState } from "react";
-
+import logo from "../../public/assets/icons/logoAutoAwesome.svg";
 interface Props {
   isNavBarOpen: boolean;
   setIsNavBarOpen: (isOpen: boolean) => void;
@@ -28,7 +28,7 @@ const NavBar = ({ isSmallScreen }: Props) => {
                   className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
                   loading="lazy"
                   alt=""
-                  src="/auto-awesome-black-24dp-1.svg"
+                  src={logo}
                 />
                 <NavLink to="/Home" 
                 className="flex flex-col items-start justify-start no-underline text-preto-100">
@@ -87,7 +87,7 @@ const NavBar = ({ isSmallScreen }: Props) => {
               className="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
               loading="lazy"
               alt=""
-              src="/auto-awesome-black-24dp-1.svg"
+              src={logo}
             />
             <NavLink to="/Home" 
                 className="flex flex-col items-start justify-start no-underline text-preto-100">
