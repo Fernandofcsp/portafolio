@@ -6,10 +6,12 @@ import unityGame from "../../public/assets/proyects/juegoPlataformas2.png"
 import financeBond from "../../public/assets/proyects/financeBond.png"
 
 export const Proyectos = () => {
-
+  const handleDivLoad = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
     return (
-        <Layout>
-        <div className="bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway">
+        <Layout >
+        <div onLoad={handleDivLoad} className="bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway">
           <h2 className="m-4 w-[248px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
             Experiencia profesional
           </h2>
@@ -17,7 +19,7 @@ export const Proyectos = () => {
             infoCard={guitarPage}
             titleDescription="Pagina web de cursos"
             propWidth="auto"
-            propHeight="320px"
+            propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
             imagePosition="left" // right  | left
             repoLink="https://github.com/Fernandofcsp/guitarPage"
@@ -31,13 +33,13 @@ export const Proyectos = () => {
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
             imagePosition="right" // right  | left
             repoLink="https://github.com/Fernandofcsp/juegoPlataformasUnity"
-            demoLink="/portafolio/#/unityGame"
+            demoLink="https://fernandofcsp.github.io/juegoPlataformasUnity/"
           />
           <Experiencia
             infoCard={encryptText}
             titleDescription="Encriptador de texto"
             propWidth="auto"
-            propHeight="320px"
+            propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
             imagePosition="left" // right  | left
             repoLink="https://github.com/Fernandofcsp/Text-Encryption"
@@ -48,7 +50,7 @@ export const Proyectos = () => {
             infoCard={financeBond}
             titleDescription="ERP Finance Bond"
             propWidth="auto"
-            propHeight="320px"
+            propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
             imagePosition="right" // right  | left
             repoLink="https://github.com/Fernandofcsp/modular_front"

@@ -58,7 +58,7 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
       className={`mq750:flex-col  ${contenedorClases}`}
       style={experienciaStyle}
     >
-      <div className="bordered border-black">
+      <div className="">
       <img
         className="object-cover"
         loading="lazy"
@@ -70,15 +70,15 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
       
       <div className="flex flex-col items-start justify-center gap-4 md:w-1/2">
         <b className="relative">{titleDescription}</b>
-        <div className="flex flex-row justify-start gap-4">
+        <div className="flex flex-row justify-center gap-4">
           <a
             href={repoLink}
             style={{ textDecoration: "none" }}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="rounded-md w-32 cursor-pointer py-3 px-4 bg-gray-800 flex items-center justify-center whitespace-nowrap hover:bg-gray-700">
-              <div className="text-sm font-semibold font-raleway text-preto-branco text-left inline-block min-w-[64px]">
+            <button className="rounded-md w-34 cursor-pointer py-3 px-4 bg-gray-800 flex items-center justify-center whitespace-nowrap hover:bg-gray-700">
+              <div className="text-sm font-semibold font-raleway text-preto-branco text-left inline-block min-w-[14px]">
                 Repositorio
               </div>
               <FaGithub

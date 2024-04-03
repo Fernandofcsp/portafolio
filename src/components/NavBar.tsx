@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import ScrollToTopNavLink from "./ScrollToTopNavLink";
 import menu from "../../public/assets/icons/menu.png";
 import { useState } from "react";
 import logo from "../../public/assets/icons/logoAutoAwesome.svg";
@@ -15,8 +16,6 @@ const NavBar = ({ isSmallScreen }: Props) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-
-
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md rounded-md">
       <div className="flex items-center w-full">
@@ -30,8 +29,10 @@ const NavBar = ({ isSmallScreen }: Props) => {
                   alt=""
                   src={logo}
                 />
-                <NavLink to="/Home" 
-                className="flex flex-col items-start justify-start no-underline text-preto-100">
+                <NavLink
+                  to="/Home"
+                  className="flex flex-col items-start justify-start no-underline text-preto-100"
+                >
                   <b className="relative inline-block min-w-[102px] whitespace-nowrap">
                     Fernando Cesar Sandoval Padilla
                   </b>
@@ -50,13 +51,9 @@ const NavBar = ({ isSmallScreen }: Props) => {
           </div>
         )}
       </div>
-      <div
-        className={`${
-          isSmallScreen && isMenuOpen ? "block" : "hidden"
-        } `}
-      >
+      <div className={`${isSmallScreen && isMenuOpen ? "block" : "hidden"} `}>
         <div className=" p-1 w-full rounded-md bg-white border-black text-preto-100 text-center">
-        <NavLink
+          <NavLink
             to="/Home"
             className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-20 py-2 px-4"
             onClick={toggleMenu}
@@ -66,14 +63,31 @@ const NavBar = ({ isSmallScreen }: Props) => {
           <NavLink
             to="/proyectos"
             className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-20 py-2 px-4"
-            onClick={toggleMenu}
+            onClick={() => {
+              toggleMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Proyectos
+          </NavLink>
+
+          <NavLink
+            to="/certificaciones"
+            className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-24 py-2 px-4"
+            onClick={() => {
+              toggleMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            Certificaciones
           </NavLink>
           <NavLink
             to="/contacto"
             className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-20 py-2 px-4"
-            onClick={toggleMenu}
+            onClick={() => {
+              toggleMenu();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Contacto
           </NavLink>
@@ -89,34 +103,44 @@ const NavBar = ({ isSmallScreen }: Props) => {
               alt=""
               src={logo}
             />
-            <NavLink to="/Home" 
-                className="flex flex-col items-start justify-start no-underline text-preto-100">
-                  <b className="relative inline-block min-w-[102px] whitespace-nowrap">
-                    Fernando Cesar Sandoval Padilla
-                  </b>
-                  <b className="relative whitespace-nowrap text-xs">
-                    fernandocsp19@gmail.com
-                  </b>
-                </NavLink>
+            <NavLink
+              to="/Home"
+              className="flex flex-col items-start justify-start no-underline text-preto-100"
+            >
+              <b className="relative inline-block min-w-[102px] whitespace-nowrap">
+                Fernando Cesar Sandoval Padilla
+              </b>
+              <b className="relative whitespace-nowrap text-xs">
+                fernandocsp19@gmail.com
+              </b>
+            </NavLink>
           </div>
           <div className=" flex flex-col items-start justify-start pt-[2.5px] px-0 pb-0 box-border max-w-full">
             <div className="   rounded-md bg-white border-black text-preto-100 text-center">
-            <NavLink
-            to="/Home"
-            className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-16 py-2 px-4"
-            onClick={toggleMenu}
-          >
-            Inicio
-          </NavLink>
+              <NavLink
+                to="/Home"
+                className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-16 py-2 px-4"
+                onClick={toggleMenu}
+              >
+                Inicio
+              </NavLink>
               <div className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-16 py-2 px-4">
-              <NavLink to="/proyectos" className="text-preto-100">
+                <ScrollToTopNavLink to="/proyectos" className="text-preto-100">
                   Proyectos
-                </NavLink>
+                </ScrollToTopNavLink>
+              </div>
+              <div className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-18 py-2 px-4">
+                <ScrollToTopNavLink
+                  to="/certificaciones"
+                  className="text-preto-100"
+                >
+                  Certificaciones
+                </ScrollToTopNavLink>
               </div>
               <div className="hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-16 py-2 px-4">
-                <NavLink to="/contacto" className="text-preto-100">
+                <ScrollToTopNavLink to="/contacto" className="text-preto-100">
                   Contacto
-                </NavLink>
+                </ScrollToTopNavLink>
               </div>
             </div>
           </div>

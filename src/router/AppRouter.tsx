@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Contacto } from "../pages/Contacto";
 import { Proyectos } from "../pages/Proyectos";
-import { UnityGame } from "../pages/UnityGame";
+import { Certificaciones } from "../pages/Certificaciones";
 export const AppRouter = () => {
   return (
     <Routes>
@@ -12,8 +12,10 @@ export const AppRouter = () => {
       <Route path="/contacto" element={<Contacto />} />
       {/* Proyectos */}
       <Route path="/proyectos" element={<Proyectos />} />
+      {/* Certificaciones */}
+      <Route path="/certificaciones" element={<Certificaciones />} />
 
-      <Route path="/unityGame" element={<UnityGame />} />
+
       {/* <Route path="*" element={<NotFoundPage />} /> */}
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>

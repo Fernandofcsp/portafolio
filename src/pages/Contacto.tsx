@@ -79,10 +79,15 @@ export const Contacto = () => {
       });
     }
   };
-
+  const handleDivLoad = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <Layout>
-      <div className="w-full relative  bg-preto-05 overflow-hidden  ">
+      <div
+        onLoad={handleDivLoad}
+        className="w-full relative  bg-preto-05 overflow-hidden  "
+      >
         <div className=" items-center justify-center mt-20 mb-10 flex  md:flex-row mq450:flex-col mq750:flex-col bg-blue-100 p-8 box-border gap-8">
           {/* Columna de la izquierda */}
           <div className="">
