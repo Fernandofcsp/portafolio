@@ -23,7 +23,7 @@ export const Certificaciones = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <DocumentCert
             infoCard={javaPoo}
-            titleDescription="JAVA POO"
+            titleDescription="JAVA Orientado a Objetos"
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
