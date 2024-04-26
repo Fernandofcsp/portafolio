@@ -19,9 +19,9 @@ const ButtonTheme: React.FC = () => {
         }}
       >
         <div>
-          <Listbox.Button className="z-10 h-8 w-8 items-center justify-center rounded-full shadow-md shadow-black/5 ring-1 ring-black/5 hover:ring-teal-500 focus:ring-2 focus:ring-teal-500 active:ring-teal-500 dark:bg-[#21242b] dark:ring-inset dark:ring-white/5">
+          <Listbox.Button className="h-8 w-8 rounded-full shadow-md shadow-black/5 ring-1 ring-black/5 hover:ring-teal-500 focus:ring-2 focus:ring-teal-500 active:ring-teal-500 dark:bg-[#21242b] dark:ring-inset dark:ring-white/5">
             {theme === "light" && (
-              <svg className="h-4 w-4 fill-gray-400" viewBox="0 0 16 16">
+              <svg className=" h-4 w-4 fill-gray-400" viewBox="0 0 16 16">
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -70,7 +70,7 @@ const ThemeOption: React.FC<{ value: string }> = ({ value }) => {
       className={({ active }) =>
         `${
           active
-            ? "text-teal-500 hover:bg-gray-200 dark:hover:bg-gray-700"
+            ? "text-teal-500 hover:bg-gray-200 dark:hover:bg-gray-800"
             : "text-gray-700 dark:text-gray-400"
         } flex cursor-pointer select-none items-center rounded-md p-2`
       }
@@ -95,8 +95,8 @@ const ThemeIcon: React.FC<{ selected: boolean; value: string }> = ({
   value,
 }) => {
   const iconClass = selected
-    ? "h-4 w-4 fill-teal-400 dark:fill-teal-400"
-    : "h-4 w-4 fill-gray-400";
+    ? "h-4 w-4 fill-teal-400 dark:fill-teal-400 bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5 rounded-lg"
+    : "h-4 w-4 fill-gray-400 bg-white p-1 shadow ring-1 ring-gray-900/5 dark:bg-gray-700 dark:ring-inset dark:ring-white/5 rounded-lg";
   const iconPath =
     value === "dark"
       ? "M7.23 3.333C7.757 2.905 7.68 2 7 2a6 6 0 1 0 0 12c.68 0 .758-.905.23-1.332A5.989 5.989 0 0 1 5 8c0-1.885.87-3.568 2.23-4.668ZM12 5a1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 0 1 1 0 2 1 1 0 0 0-1 1 1 1 0 1 1-2 0 1 1 0 0 0-1-1 1 1 0 1 1 0-2 1 1 0 0 0 1-1 1 1 0 0 1 1-1Z"

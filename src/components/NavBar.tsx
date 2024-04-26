@@ -17,38 +17,35 @@ const NavBar = ({ isSmallScreen }: Props) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-[#282c34] shadow-md rounded-xsm">
-      
-        {isSmallScreen && (
-          
-            <div className="self-stretch h-10 flex flex-row items-start justify-between py-1 px-2">
-              
-              <ButtonTheme />
-              <NavLink
-                  to="/Home"
-                  className="absolute ml-10 dark:text-white flex flex-col items-start justify-start no-underline text-preto-100"
-                >
-                  <b className="relative inline-block min-w-[102px] whitespace-nowrap">
-                    Fernando Cesar Sandoval Padilla
-                  </b>
-                  <b className="relative whitespace-nowrap text-xs">
-                    fernandocsp19@gmail.com
-                  </b>
-                </NavLink>
-                
-             
-              <div
-                className="dark:invert cursor-pointer hover:bg-gray-200 p-1 rounded"
-                onClick={() => toggleMenu()}
-              >
-                <img className="w-8" src={menu} alt="" />
-              </div>
-            </div>
-          
-        )}
-      
+      {isSmallScreen && (
+        <div className="self-stretch h-10 flex flex-row items-start justify-between py-1 px-2">
+          <div className="justify-center">
+            <ButtonTheme />
+          </div>
+
+          <NavLink
+            to="/Home"
+            className="absolute ml-10 dark:text-white flex flex-col items-start justify-start no-underline text-preto-100"
+          >
+            <b className="relative inline-block min-w-[102px] whitespace-nowrap">
+              Fernando Cesar Sandoval Padilla
+            </b>
+            <b className="relative whitespace-nowrap text-xs">
+              fernandocsp19@gmail.com
+            </b>
+          </NavLink>
+
+          <div
+            className="dark:invert cursor-pointer hover:bg-gray-200 p-1 rounded"
+            onClick={() => toggleMenu()}
+          >
+            <img className="w-8" src={menu} alt="" />
+          </div>
+        </div>
+      )}
+
       <div className={`${isSmallScreen && isMenuOpen ? "block" : "hidden"} `}>
         <div className="dark:bg-[#282c34] p-1 w-full rounded-md bg-white border-black text-preto-100 text-center">
           <NavLink
@@ -95,16 +92,16 @@ const NavBar = ({ isSmallScreen }: Props) => {
         <div className="mb-4 self-stretch h-10 flex flex-row items-start justify-between py-2.5 px-2 box-border">
           <ButtonTheme />
           <NavLink
-              to="/Home"
-              className="absolute ml-10 dark:text-white flex flex-col items-start justify-start no-underline text-preto-100"
-            >
-              <b className="relative inline-block min-w-[102px] whitespace-nowrap">
-                Fernando Cesar Sandoval Padilla
-              </b>
-              <b className="relative whitespace-nowrap text-xs">
-                fernandocsp19@gmail.com
-              </b>
-            </NavLink>
+            to="/Home"
+            className="absolute ml-10 dark:text-white flex flex-col items-start justify-start no-underline text-preto-100"
+          >
+            <b className="relative inline-block min-w-[102px] whitespace-nowrap">
+              Fernando Cesar Sandoval Padilla
+            </b>
+            <b className="relative whitespace-nowrap text-xs">
+              fernandocsp19@gmail.com
+            </b>
+          </NavLink>
           <div className="flex flex-col items-start justify-start pt-[2.5px] px-0 pb-0 box-border max-w-full">
             <div className="rounded-md text-preto-100 text-center">
               <NavLink
@@ -120,7 +117,6 @@ const NavBar = ({ isSmallScreen }: Props) => {
                   to="/proyectos"
                   className="dark:text-white text-preto-100"
                   style={{ textDecoration: "none" }}
-                  
                 >
                   Proyectos
                 </ScrollToTopNavLink>
