@@ -3,13 +3,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
 import "./global.css";
+import { ThemeProvider } from "./components/ThemeContext";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
 
 root.render(
   <HashRouter>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </HashRouter>
 );
 

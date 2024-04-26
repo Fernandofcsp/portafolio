@@ -86,9 +86,9 @@ export const Contacto = () => {
     <Layout>
       <div
         onLoad={handleDivLoad}
-        className="w-full relative  bg-preto-05 overflow-hidden  "
+        className="dark:bg-[#21242b] w-full relative bg-preto-05 overflow-hidden  "
       >
-        <div className=" items-center justify-center mt-20 mb-10 flex  md:flex-row mq450:flex-col mq750:flex-col bg-blue-100 p-8 box-border gap-8">
+        <div className="dark:bg-gray-700 items-center justify-center mt-20 mb-10 flex  md:flex-row mq450:flex-col mq750:flex-col bg-blue-100 p-8 box-border gap-8">
           {/* Columna de la izquierda */}
           <div className="">
             <img
@@ -100,23 +100,23 @@ export const Contacto = () => {
           {/* Columna de la derecha */}
           <div className="">
             <form
-              className="bg-white p-8 rounded-md"
+              className="dark:bg-[#171616] bg-white p-8 rounded-md"
               onSubmit={handleSubmit}
               action={`mailto:fernandocsp19@gmail.com`}
               method="GET"
             >
-              <h3 className="text-3xl font-bold font-raleway text-black mb-4">
+              <h3 className="dark:text-white text-3xl font-bold font-raleway text-black mb-4">
                 Contacto
               </h3>
-              <p className="text-base font-medium text-black mb-4">
+              <p className="dark:text-white text-base font-medium text-black mb-4">
                 ¿Quieres contactarme? Complete el siguiente formulario y me
                 pondré en contacto con usted lo antes posible.
               </p>
               <div className="mb-4">
                 <input
-                  className={`w-full border-b-2 ${
+                  className={`dark:bg-[#21242b] dark:text-white  w-full border-b-2 ${
                     campos.nombre ? "border-gray-300" : "border-black"
-                  } py-2 px-3 focus:outline-none focus:border-blue-500`}
+                  } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
                   placeholder="Nombre completo"
                   type="text"
                   name="nombre"
@@ -126,9 +126,9 @@ export const Contacto = () => {
               </div>
               <div className="mb-4">
                 <input
-                  className={`w-full border-b-2 ${
+                  className={`dark:bg-[#21242b] dark:text-white w-full border-b-2 ${
                     campos.email ? "border-gray-300" : "border-black"
-                  } py-2 px-3 focus:outline-none focus:border-blue-500`}
+                  } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
                   placeholder="Correo electrónico"
                   type="email"
                   name="email"
@@ -138,9 +138,9 @@ export const Contacto = () => {
               </div>
               <div className="mb-4">
                 <input
-                  className={`w-full border-b-2 ${
+                  className={`dark:bg-[#21242b] dark:text-white w-full border-b-2 ${
                     campos.asunto ? "border-gray-300" : "border-black"
-                  } py-2 px-3 focus:outline-none focus:border-blue-500`}
+                  } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
                   placeholder="Asunto"
                   type="text"
                   name="asunto"
@@ -150,9 +150,9 @@ export const Contacto = () => {
               </div>
               <div className="mb-4">
                 <textarea
-                  className={`w-full border-b-2 ${
+                  className={`dark:bg-[#21242b] dark:text-white w-full border-b-2 ${
                     campos.mensaje ? "border-gray-300" : "border-black"
-                  } py-2 px-3 focus:outline-none focus:border-blue-500`}
+                  } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
                   rows={4}
                   placeholder="Mensaje"
                   name="mensaje"

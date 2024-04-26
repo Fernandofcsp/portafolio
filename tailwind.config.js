@@ -2,6 +2,7 @@
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -50,6 +51,9 @@ module.exports = {
       mq450: {
         raw: "screen and (max-width: 450px)",
       },
+      mqScreen: {
+        raw: "screen and (min-width: 750px)",
+      }
     },
   },
   corePlugins: {

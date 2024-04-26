@@ -15,7 +15,7 @@ export const Certificaciones = () => {
     <Layout>
       <div
         onLoad={handleDivLoad}
-        className="bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway"
+        className="dark:bg-[#21242b] dark:text-white bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway"
       >
         <h2 className="m-4 w-[248px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
           Certificaciones
@@ -23,7 +23,7 @@ export const Certificaciones = () => {
         <div className="flex flex-wrap justify-center gap-4">
           <DocumentCert
             infoCard={javaPoo}
-            titleDescription="JAVA Orientado a Objetos"
+            titleDescription="Java Orientado a Objetos"
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline

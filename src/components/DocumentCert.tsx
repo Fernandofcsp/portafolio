@@ -45,13 +45,13 @@ const DocumentCert: FunctionComponent<DocumentCertProps> = ({
 
   const titleContainerStyle: CSSProperties = useMemo(() => {
     return {
-      maxWidth: "330px", // Establecer el mismo ancho máximo que la imagen
+      maxWidth: "320px", // Establecer el mismo ancho máximo que la imagen
       
     };
   }, []);
 
   return (
-    <div className="mq750:flex-col" style={DocumentCertStyle}>
+    <div className="dark:bg-[#171616] dark:text-white mq750:flex-col bg-white p-5 mqScreen:max-w-[22%] rounded-3xl" style={DocumentCertStyle}>
       <div>
         <img
           className="object-cover"

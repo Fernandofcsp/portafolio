@@ -45,7 +45,7 @@ export const Home = () => {
 
   return (
     <Layout>
-      <div className="w-full relative  bg-preto-05 overflow-hidden  ">
+      <div className="dark:bg-[#21242b] w-full relative bg-preto-05 overflow-hidden  ">
         <Social />
         <div id="sobre-mi">
           <Sobre />

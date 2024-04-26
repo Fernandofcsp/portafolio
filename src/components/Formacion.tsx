@@ -27,7 +27,7 @@ export const Formacion = () => {
   }, []);
 
   return (
-    <section className="flex flex-col  mt-10 self-stretch text-center text-3xl font-raleway">
+    <section className="dark:text-white flex flex-col  mt-10 self-stretch text-center text-3xl font-raleway">
       <div className="container mx-auto">
         <h2 className="m-8 relative text-inherit font-bold font-inherit inline-block ">
           Formación académica

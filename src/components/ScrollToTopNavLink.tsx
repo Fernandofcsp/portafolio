@@ -2,6 +2,7 @@ import { NavLink, NavLinkProps } from "react-router-dom";
 
 interface ScrollToTopNavLinkProps extends NavLinkProps {
   to: string;
+  activeClassName?: string; // Agrega la propiedad activeClassName
 }
 
 const ScrollToTopNavLink: React.FC<ScrollToTopNavLinkProps> = ({

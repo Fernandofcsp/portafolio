@@ -55,7 +55,7 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
 
   return (
     <div
-      className={`mq750:flex-col  ${contenedorClases}`}
+      className={`dark:bg-[#171616] dark:text-white mq750:flex-col bg-white w-[90%] p-5 rounded-3xl  ${contenedorClases}`}
       style={experienciaStyle}
     >
       <div className="">
@@ -69,7 +69,7 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
       </div>
       
       <div className="flex flex-col items-start justify-center gap-4 md:w-1/2">
-        <b className="relative">{titleDescription}</b>
+        <a className="relative" >{titleDescription}</a>
         <div className="flex flex-row justify-center gap-4">
           <a
             href={repoLink}
@@ -93,7 +93,7 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="rounded-md w-32 cursor-pointer py-3 px-4 bg-azul-100 flex items-center justify-center whitespace-nowrap hover:bg-dodgerblue-100">
+            <button className="rounded-md w-32 cursor-pointer py-3 px-4 bg-sky-500 flex items-center justify-center whitespace-nowrap hover:bg-dodgerblue-100">
               <div className="text-sm font-semibold font-raleway text-preto-branco text-left inline-block min-w-[64px]">
                 Ver demo
               </div>
