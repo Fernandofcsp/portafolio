@@ -11,6 +11,12 @@ import { FaBootstrap } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { BsFiletypeCss } from "react-icons/bs";
+import { BiLogoSpringBoot } from "react-icons/bi";
+import { SiGit } from "react-icons/si";
+import { SiVite } from "react-icons/si";
+import { BsFiletypeJson } from "react-icons/bs";
+import { SiApachemaven } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
 
 interface SkillProps {
   name: string;
@@ -57,6 +63,13 @@ const AreaDeSkills: FunctionComponent = () => {
     { name: "Bootstrap", icon: <FaBootstrap className="w-10 h-10" /> },
     { name: "MySQL", icon: <SiMysql className="w-10 h-10" /> },
     { name: "PostgreSQL", icon: <BiLogoPostgresql className="w-10 h-10" /> },
+    { name: "Git", icon: <SiGit className="w-10 h-10" /> },
+    {name: "Spring Boot", icon: <BiLogoSpringBoot className="w-10 h-10" />},
+    {name: "Vite", icon: <SiVite className="w-10 h-10" />},
+    {name: "JSON", icon: <BsFiletypeJson className="w-10 h-10" />},
+    {name: "Apache Maven", icon: <SiApachemaven className="w-10 h-10" />},
+    {name: "VS Code", icon: <TbBrandVscode className="w-10 h-10" />},
+    
   ];
 
   return (

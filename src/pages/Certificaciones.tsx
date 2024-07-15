@@ -7,6 +7,8 @@ import priProgra from "../../public/assets/certifications/PrincipianteProgramaci
 import designThinking from "../../public/assets/certifications/FT MX - Certificado.png";
 import projectManagement from "../../public/assets/certifications/SkillsBuild_ProjectManagementFundamentals_Badge.png";
 import javaPoo from "../../public/assets/certifications/JavaOrientadoaObjetos.png";
+import javaSpringBoot from "../../public/assets/certifications/JavaSpringBoot.png";
+import programaOne from "../../public/assets/certifications/ProgramaOne.png";
 export const Certificaciones = () => {
   const handleDivLoad = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,6 +23,22 @@ export const Certificaciones = () => {
           Certificaciones
         </h2>
         <div className="flex flex-wrap justify-center gap-4">
+          <DocumentCert
+            infoCard={programaOne}
+            titleDescription="Programa ONE"
+            propWidth="auto"
+            propHeight="500px"
+            propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+            demoLink="https://app.aluracursos.com/program/certificate/f8ea90c1-91d9-47c3-b517-246f6043413a"
+          />
+          <DocumentCert
+            infoCard={javaSpringBoot}
+            titleDescription="Java & Spring Boot"
+            propWidth="auto"
+            propHeight="500px"
+            propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+            demoLink="https://app.aluracursos.com/degree/certificate/6f35e53a-fdb4-48f6-bc04-b45c60e37e05"
+          />
           <DocumentCert
             infoCard={javaPoo}
             titleDescription="Java Orientado a Objetos"

@@ -5,7 +5,8 @@ import guitarPage from "../../public/assets/proyects/guitarPage.png";
 import unityGame from "../../public/assets/proyects/juegoPlataformas2.png";
 import financeBond from "../../public/assets/proyects/financeBond.png";
 import conversorMonedas from "../../public/assets/proyects/conversorMonedas.gif";
-
+import literalura from "../../public/assets/proyects/literalura.png";
+import forohub from "../../public/assets/proyects/forohub.png";
 export const Proyectos = () => {
   const handleDivLoad = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -69,6 +70,26 @@ export const Proyectos = () => {
           repoLink="https://github.com/Fernandofcsp/conversorMonedasAPI"
           demoLink="https://drive.google.com/file/d/19kxfFrkaLZy0aZPSvexqm0cSiywpJKbV/view?usp=drive_link"
         />
+        <Experiencia
+          infoCard={literalura}
+          titleDescription="Literalura"
+          propWidth="auto"
+          propHeight="500px"
+          propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+          imagePosition="right" // right  | left
+          repoLink="https://github.com/Fernandofcsp/literalura"
+          demoLink="https://drive.google.com/file/d/1Pb5Kb_gnG_cimbJn4HzBb-o5rn9lX0bj/view"
+        />
+        <Experiencia
+          infoCard={forohub}
+          titleDescription="API Rest ForoHub"
+          propWidth="auto"
+          propHeight="500px"
+          propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
+          imagePosition="left" // right  | left
+          repoLink="https://github.com/Fernandofcsp/forohub"
+          demoLink="https://drive.google.com/file/d/103Fyq_TgCgPU1gdl-7cTw2v0R_JeFMBk/view"
+          />
       </div>
     </Layout>
   );

@@ -54,8 +54,8 @@ const Sobre: FunctionComponent<SobreType> = ({
       >
         <div className="self-stretch relative whitespace-pre-wrap mb-3">
           Soy ingeniero en informática del Centro Universitario de Ciencias
-          Exactas e Ingenierías, actualmente estoy participando en el proyecto
-          Oracle ONE en Alura Latam.
+          Exactas e Ingenierías, graduado del grupo 6 con especializacion en Back-end del programa
+          Oracle Next Educations (ONE).
         </div>
         <p className="m-0 ">
           Me apasionan las áreas relacionadas con la administración de
