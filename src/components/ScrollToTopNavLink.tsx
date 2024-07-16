@@ -1,8 +1,9 @@
 import { NavLink, NavLinkProps } from "react-router-dom";
+import React, { useState } from "react";
 
 interface ScrollToTopNavLinkProps extends NavLinkProps {
   to: string;
-  activeClassName?: string; // Agrega la propiedad activeClassName
+  activeClassName?: string;
 }
 
 const ScrollToTopNavLink: React.FC<ScrollToTopNavLinkProps> = ({
@@ -10,19 +11,20 @@ const ScrollToTopNavLink: React.FC<ScrollToTopNavLinkProps> = ({
   children,
   ...rest
 }) => {
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  const handleTouchStart = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleClick = () => {
+    if (!isScrolling) {
+      setIsScrolling(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => setIsScrolling(false), 500); // Asegura que el estado se restablezca después de 500ms
+    }
   };
 
   return (
     <NavLink
       to={to}
       onClick={handleClick}
-      onTouchStart={handleTouchStart}
       {...rest}
     >
       {children}
