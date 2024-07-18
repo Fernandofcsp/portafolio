@@ -19,7 +19,7 @@ const ButtonTheme: React.FC = () => {
         }}
       >
         <div>
-          <Listbox.Button className="h-8 w-8 rounded-full shadow-md shadow-black/5 ring-1 ring-black/5 hover:ring-teal-500 focus:ring-2 focus:ring-teal-500 active:ring-teal-500 dark:bg-[#21242b] dark:ring-inset dark:ring-white/5">
+          <Listbox.Button className="cursor-pointer h-8 w-8 rounded-full shadow-md shadow-black/5 ring-1 ring-black/5 hover:ring-teal-500 focus:ring-2 focus:ring-teal-500 active:ring-teal-500 dark:bg-[#21242b] dark:ring-inset dark:ring-white/5">
             {theme === "light" && (
               <svg className=" h-4 w-4 fill-gray-400" viewBox="0 0 16 16">
                 <path

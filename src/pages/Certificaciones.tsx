@@ -1,5 +1,7 @@
 import Layout from "../components/Layout";
 import DocumentCert from "../components/DocumentCert";
+import { useLanguage } from "../contexts/LanguageContext";
+import translations from "../translations/translations";
 import introFrontEnd from "../../public/assets/certifications/IntroFront-End.png";
 import Emprendimiento from "../../public/assets/certifications/Emprendimiento.png";
 import desarrolloPersonal from "../../public/assets/certifications/DesarrolloPersonal.png";
@@ -13,6 +15,8 @@ export const Certificaciones = () => {
   const handleDivLoad = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const { language } = useLanguage();
+  const t = translations[language as "en" | "es"];
   return (
     <Layout>
       <div
@@ -20,12 +24,12 @@ export const Certificaciones = () => {
         className="dark:bg-[#21242b] dark:text-white bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway"
       >
         <h2 className="m-4 w-[248px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
-          Certificaciones
+          {t.certifications.title}
         </h2>
         <div className="flex flex-wrap justify-center gap-4">
           <DocumentCert
             infoCard={programaOne}
-            titleDescription="Programa ONE"
+            titleDescription={t.certifications.cert1}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -33,7 +37,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={javaSpringBoot}
-            titleDescription="Java & Spring Boot"
+            titleDescription={t.certifications.cert2}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -41,7 +45,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={javaPoo}
-            titleDescription="Java Orientado a Objetos"
+            titleDescription={t.certifications.cert3}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -49,7 +53,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={desarrolloPersonal}
-            titleDescription="Desarrollo Personal"
+            titleDescription={t.certifications.cert4}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -57,7 +61,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={Emprendimiento}
-            titleDescription="Emprendimiento, agilidad y protagonismo profesional"
+            titleDescription={t.certifications.cert5}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -65,7 +69,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={designThinking}
-            titleDescription="Design Thinking"
+            titleDescription={t.certifications.cert6}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -73,7 +77,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={introFrontEnd}
-            titleDescription="Introduction to Front-End Development"
+            titleDescription={t.certifications.cert7}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -81,7 +85,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={projectManagement}
-            titleDescription="Project Management"
+            titleDescription={t.certifications.cert8}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline
@@ -89,7 +93,7 @@ export const Certificaciones = () => {
           />
           <DocumentCert
             infoCard={priProgra}
-            titleDescription="Principiante en programación"
+            titleDescription={t.certifications.cert9}
             propWidth="auto"
             propHeight="500px"
             propAlignSelf="center" //stretch | center | flex-start | flex-end | baseline

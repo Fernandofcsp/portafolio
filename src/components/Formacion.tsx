@@ -1,6 +1,8 @@
 import { useMemo, CSSProperties } from "react";
 import cucei from "../../public/assets/images/cucei.png";
 import one from "../../public/assets/images/ONE.png";
+import { useLanguage } from "../contexts/LanguageContext";
+import translations from "../translations/translations";
 
 export const Formacion = () => {
   const formacionStyle: CSSProperties = useMemo(() => {
@@ -25,12 +27,13 @@ export const Formacion = () => {
       marginRight: "1rem",
     };
   }, []);
-
+  const { language } = useLanguage();
+  const t = translations[language as "en" | "es"];
   return (
     <section className="dark:text-white flex flex-col  mt-10 self-stretch text-center text-3xl font-raleway">
       <div className="container mx-auto">
         <h2 className="m-8 relative text-inherit font-bold font-inherit inline-block ">
-          Formación académica
+          {t.formation.title}
         </h2>
         <div className={`mq750:flex-col `} style={formacionStyle}>
           <div className="mb-8 flex flex-col items-center justify-center">
@@ -48,7 +51,7 @@ export const Formacion = () => {
               />
             </a>
 
-            <b className="relative">Ingeniería en Informática</b>
+            <b className="relative">{t.formation.career}</b>
             <div className="relative text-sm font-medium">2019 - CUCEI</div>
           </div>
           <div className="mb-8 flex flex-col items-center justify-center">

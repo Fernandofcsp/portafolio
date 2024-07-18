@@ -2,14 +2,19 @@ import { FunctionComponent, useState } from "react";
 import profile from "../../public/assets/images/profile.png";
 import toLink from "../../public/assets/icons/linkTo.svg";
 import { TypeAnimation } from "react-type-animation";
-
+import { useLanguage } from "../contexts/LanguageContext";
+import translations from "../translations/translations";
 const Social: FunctionComponent = () => {
   const [selectedLink, setSelectedLink] = useState<string | null>(null);
+  const { language } = useLanguage();
+  const t = translations[language as 'en' | 'es'];
+
+
   return (
-    <section className=" mt-16  mq750:mt-5 self-stretch flex flex-row flex-wrap  justify-start py-8 pr-[34px] pl-8 box-border gap-[32px] max-w-full text-left text-base text-preto-100 font-raleway mq450:gap-[16px]">
-      <div className="mq750:hidden ">
+    <section className="mt-16 mq750:mt-5 self-stretch flex flex-row flex-wrap justify-start py-8 pr-[34px] pl-8 box-border gap-[32px] max-w-full text-left text-base text-preto-100 font-raleway mq450:gap-[16px]">
+      <div className="mq750:hidden">
         <img
-          className="my-auto mx-auto mq750:top-0  mq750:left-0  w-[220px] h-[220px] mq750:w-[250px] mq750:h-[250px] md:w-[150px] md:right-0 rounded-full"
+          className="my-auto mx-auto mq750:top-0 mq750:left-0 w-[220px] h-[220px] mq750:w-[250px] mq750:h-[250px] md:w-[150px] md:right-0 rounded-full"
           loading="lazy"
           alt=""
           src={profile}
@@ -17,18 +22,19 @@ const Social: FunctionComponent = () => {
       </div>
       <div className="dark:text-white flex-1 flex flex-col items-start justify-start gap-[8px] max-w-full mq450:min-w-full">
         <h2 className="mb-0 dark:text-green-500 text-green-800 mq450:text-lg">
-          ¡Hola! 👋 Mi nombre es
+          {t.social.greeting}
         </h2>
         <h3 className="m-0 self-stretch relative text-33xl font-bold font-inherit mq450:text-lg">
-          Fernando Cesar Sandoval Padilla.
+          {t.social.name}
         </h3>
         <TypeAnimation
+          key={language}
           className="mq450:text-sm mb-2 text-[30px]"
           sequence={[
             // Same substring at the start will only be typed out once, initially
-            "Front-end Developer",
+            t.social.roles.frontend,
             1000,
-            "Back-end Developer",
+            t.social.roles.backend,
             1000,
           ]}
           wrapper="span"
@@ -41,13 +47,13 @@ const Social: FunctionComponent = () => {
           repeat={Infinity}
         />
         <div className="my-auto mx-auto block mqScreen:hidden">
-  <img
-    className="my-auto mx-auto w-[220px] h-[220px] md:w-[150px] md:right-0 rounded-full"
-    loading="lazy"
-    alt=""
-    src={profile}
-  />
-</div>
+          <img
+            className="my-auto mx-auto w-[220px] h-[220px] md:w-[150px] md:right-0 rounded-full"
+            loading="lazy"
+            alt=""
+            src={profile}
+          />
+        </div>
 
         <div className="mt-4 mb-4 w-[467px] flex flex-row items-start justify-start gap-[12px] max-w-full mq450:flex-wrap mq675:gap-[32px_16px]">
           <div className="h-6 flex flex-row items-center justify-start gap-[4px]">
@@ -62,7 +68,7 @@ const Social: FunctionComponent = () => {
                 onMouseEnter={() => setSelectedLink("github")}
                 onMouseLeave={() => setSelectedLink(null)}
               >
-                Github
+                {t.social.links.github}
               </a>
             </div>
             <img
@@ -84,7 +90,7 @@ const Social: FunctionComponent = () => {
                 onMouseEnter={() => setSelectedLink("linkedin")}
                 onMouseLeave={() => setSelectedLink(null)}
               >
-                Linkedin
+                {t.social.links.linkedin}
               </a>
             </div>
             <img
@@ -105,7 +111,7 @@ const Social: FunctionComponent = () => {
                 onMouseEnter={() => setSelectedLink("cv")}
                 onMouseLeave={() => setSelectedLink(null)}
               >
-                Currículum
+                {t.social.links.resume}
               </a>
             </div>
             <img

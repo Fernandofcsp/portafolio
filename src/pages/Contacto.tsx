@@ -2,6 +2,8 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "../components/Layout";
+import { useLanguage } from "../contexts/LanguageContext";
+import translations from "../translations/translations";
 import mailbox from "../../public/assets/images/mailbox.png";
 interface Expresiones {
   [key: string]: RegExp;
@@ -82,6 +84,8 @@ export const Contacto = () => {
   const handleDivLoad = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const { language } = useLanguage();
+  const t = translations[language as "en" | "es"];
   return (
     <Layout>
       <div
@@ -106,18 +110,17 @@ export const Contacto = () => {
               method="GET"
             >
               <h3 className="dark:text-white text-3xl font-bold font-raleway text-black mb-4">
-                Contacto
+                {t.contact.title}
               </h3>
               <p className="dark:text-white text-base font-medium text-black mb-4">
-                ¿Quieres contactarme? Complete el siguiente formulario y me
-                pondré en contacto con usted lo antes posible.
+              {t.contact.subtitle}
               </p>
               <div className="mb-4">
                 <input
                   className={`dark:bg-[#21242b] dark:text-white  w-full border-b-2 ${
                     campos.nombre ? "border-gray-300" : "border-black"
                   } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
-                  placeholder="Nombre completo"
+                  placeholder={t.contact.name}
                   type="text"
                   name="nombre"
                   value={form.nombre}
@@ -129,7 +132,7 @@ export const Contacto = () => {
                   className={`dark:bg-[#21242b] dark:text-white w-full border-b-2 ${
                     campos.email ? "border-gray-300" : "border-black"
                   } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
-                  placeholder="Correo electrónico"
+                  placeholder={t.contact.mail}
                   type="email"
                   name="email"
                   value={form.email}
@@ -141,7 +144,7 @@ export const Contacto = () => {
                   className={`dark:bg-[#21242b] dark:text-white w-full border-b-2 ${
                     campos.asunto ? "border-gray-300" : "border-black"
                   } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
-                  placeholder="Asunto"
+                  placeholder={t.contact.subject}
                   type="text"
                   name="asunto"
                   value={form.asunto}
@@ -154,7 +157,7 @@ export const Contacto = () => {
                     campos.mensaje ? "border-gray-300" : "border-black"
                   } py-2 px-3 focus:outline-none rounded-md dark:placeholder-white focus:border-blue-500`}
                   rows={4}
-                  placeholder="Mensaje"
+                  placeholder={t.contact.message}
                   name="mensaje"
                   value={form.mensaje}
                   onChange={handleChange}
@@ -164,7 +167,7 @@ export const Contacto = () => {
                 className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
                 type="submit"
               >
-                Enviar mensaje
+                {t.contact.submit}
               </button>
               <ToastContainer className={`mt-10`} />
             </form>

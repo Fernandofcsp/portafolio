@@ -1,10 +1,12 @@
 import { FunctionComponent, useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import translations from "../translations/translations";
 import { GiAutoRepair } from "react-icons/gi";
 import { FaBook } from "react-icons/fa";
 import { TbGoGame } from "react-icons/tb";
 import { FaHeadphones } from "react-icons/fa";
-import { FaTv } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 
 interface HobbyProps {
   name: string;
@@ -28,24 +30,27 @@ const HobbyCard: FunctionComponent<HobbyProps> = ({ name, icon }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex items-center justify-center mb-2" style={{ width: '40px', height: '40px' }}>
+      <div
+        className="flex items-center justify-center mb-2"
+        style={{ width: "40px", height: "40px" }}
+      >
         {icon}
-        
       </div>
       {isHovered && <span className="text-xs ml-2">{name}</span>}
-      
     </div>
   );
 };
 
 const AreaDeHobbies: FunctionComponent = () => {
+  const { language } = useLanguage();
+  const t = translations[language as "en" | "es"];
   const hobbies: HobbyProps[] = [
-    { name: "Leer", icon: <FaBook className="w-8 h-8" /> },
-    { name: "Jugar juegos de mesa", icon: <TbGoGame className="w-8 h-8" /> },
-    { name: "Escuchar música", icon: <FaHeadphones className="w-8 h-8" /> },
-    { name: "Ver series", icon: <FaTv className="w-8 h-8" /> },
-    { name: "Reparar equipos de computo", icon: <GiAutoRepair className="w-8 h-8" /> },
-    { name: "Tomar fotos", icon: <FaCamera className="w-8 h-8" /> },
+    { name: t.hobbies.hobbie1, icon: <FaBook className="w-8 h-8" /> },
+    { name: t.hobbies.hobbie2, icon: <TbGoGame className="w-8 h-8" /> },
+    { name: t.hobbies.hobbie3, icon: <FaHeadphones className="w-8 h-8" /> },
+    { name: t.hobbies.hobbie4, icon: <FaLaptopCode className="w-8 h-8" /> },
+    { name: t.hobbies.hobbie5, icon: <GiAutoRepair className="w-8 h-8" />,},
+    { name: t.hobbies.hobbie6, icon: <FaCamera className="w-8 h-8" /> },
   ];
 
   return (

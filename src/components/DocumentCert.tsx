@@ -1,4 +1,6 @@
 import { FunctionComponent, useMemo, CSSProperties } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import translations from "../translations/translations";
 import { GrCertificate } from "react-icons/gr";
 
 type DocumentCertProps = {
@@ -49,7 +51,9 @@ const DocumentCert: FunctionComponent<DocumentCertProps> = ({
       
     };
   }, []);
-
+  
+  const { language } = useLanguage();
+  const t = translations[language as "en" | "es"];
   return (
     <div className="dark:bg-[#171616] dark:text-white mq750:flex-col bg-white p-5 mqScreen:max-w-[22%] rounded-3xl" style={DocumentCertStyle}>
       <div>
@@ -71,7 +75,7 @@ const DocumentCert: FunctionComponent<DocumentCertProps> = ({
           >
             <button className="rounded-md w-52 cursor-pointer mt-2 py-3 px-4 bg-gray-800 flex items-center justify-center whitespace-nowrap hover:bg-gray-700">
               <div className="text-sm font-semibold font-raleway mr-2 text-preto-branco text-left inline-block min-w-[10px]">
-                Ver certificado
+                {t.certifications.view}
               </div>
               <GrCertificate
                 color="white"
