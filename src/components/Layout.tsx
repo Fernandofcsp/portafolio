@@ -6,13 +6,11 @@ interface IProps {
 }
 
 const Layout = ({ children }: IProps) => {
-  const [isNavBarOpen, setIsNavBarOpen] = useState<boolean>(true);
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleMediaQueryChange = (e: any) => {
-      setIsNavBarOpen(!e.matches);
       setIsSmallScreen(e.matches);
     };
 
@@ -27,15 +25,10 @@ const Layout = ({ children }: IProps) => {
 
   return (
     <div>
-      <NavBar
-        isNavBarOpen={isNavBarOpen}
-        setIsNavBarOpen={setIsNavBarOpen}
-        isSmallScreen={isSmallScreen}
-      />
-      <main >{children}</main>
+      <NavBar isSmallScreen={isSmallScreen} />
+      <main>{children}</main>
       <Footer />
     </div>
-    
   );
 };
 
