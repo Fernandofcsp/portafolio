@@ -19,9 +19,12 @@ const ButtonTheme: React.FC = () => {
         }}
       >
         <div>
-          <Listbox.Button className="cursor-pointer h-8 w-8 rounded-full shadow-md shadow-black/5 ring-1 ring-black/5 hover:ring-teal-500 focus:ring-2 focus:ring-teal-500 active:ring-teal-500 dark:bg-[#21242b] dark:ring-inset dark:ring-white/5">
+          <Listbox.Button className="relative cursor-pointer h-8 w-8 rounded-full shadow-md shadow-black/5 ring-1 ring-black/5 hover:ring-teal-500 focus:ring-2 focus:ring-teal-500 active:ring-teal-500 dark:bg-[#21242b] dark:ring-inset dark:ring-white/5">
             {theme === "light" && (
-              <svg className=" h-4 w-4 fill-gray-400" viewBox="0 0 16 16">
+              <svg
+                className="absolute top-1/2 left-1/2 h-4 w-4 fill-gray-400 transform -translate-x-1/2 -translate-y-1/2"
+                viewBox="0 0 16 16"
+              >
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -31,7 +34,7 @@ const ButtonTheme: React.FC = () => {
             )}
             {theme === "dark" && (
               <svg
-                className="h-4 w-4 fill-teal-400 dark:fill-teal-400"
+                className="absolute top-1/2 left-1/2 h-4 w-4 fill-teal-400 dark:fill-teal-400 transform -translate-x-1/2 -translate-y-1/2"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -42,7 +45,10 @@ const ButtonTheme: React.FC = () => {
               </svg>
             )}
             {theme === "system" && (
-              <svg className="h-4 w-4 fill-gray-400" viewBox="0 0 16 16">
+              <svg
+                className="absolute top-1/2 left-1/2 h-4 w-4 fill-gray-400 transform -translate-x-1/2 -translate-y-1/2"
+                viewBox="0 0 16 16"
+              >
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
@@ -51,6 +57,7 @@ const ButtonTheme: React.FC = () => {
               </svg>
             )}
           </Listbox.Button>
+
           <Listbox.Options className="ml-14 -translate-x-1/2 space-y-1 rounded-xl bg-white p-3 text-sm font-medium shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-[#21242b] dark:ring-white/5">
             {["light", "dark", "system"].map((option) => (
               <ThemeOption key={option} value={option} />

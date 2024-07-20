@@ -39,9 +39,9 @@ const NavBar = ({ isSmallScreen }: Props) => {
     <div className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-[#282c34] shadow-md rounded-xsm" ref={menuRef}>
       {isSmallScreen && (
         <div className="self-stretch h-10 flex flex-row items-start justify-between py-1 px-2">
-          <div className="justify-center">
+          
             <ButtonTheme />
-          </div>
+          
           <div className="absolute ml-10 dark:text-white flex flex-col items-start justify-start no-underline text-preto-100">
             <b className="relative inline-block min-w-[102px] whitespace-nowrap">
               Fernando Cesar Sandoval Padilla
