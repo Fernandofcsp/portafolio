@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  base: "/portafolio/",
+  base: "/",
   css: {
     postcss: {
       plugins: [

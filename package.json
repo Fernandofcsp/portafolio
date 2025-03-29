@@ -2,7 +2,7 @@
   "name": "portafolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://fernandofcsp.github.io/portafolio/",
+  "homepage": "https://www.fernandosp.es",
   "type": "module",
   "scripts": {
     "dev": "vite",
