@@ -6,7 +6,7 @@ export const Footer = () => {
           <p className="m-0 dark:text-white">
             Fernando Cesar Sandoval Padilla
           </p>
-          <p className="m-0 dark:text-white">@2024</p>
+          <p className="m-0 dark:text-white">@2025</p>
         </div>
       </section>
     </div>
