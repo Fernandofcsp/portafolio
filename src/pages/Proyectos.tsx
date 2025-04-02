@@ -9,7 +9,7 @@ import financeBond from "../../public/assets/proyects/financeBond.png";
 import conversorMonedas from "../../public/assets/proyects/conversorMonedas.gif";
 import literalura from "../../public/assets/proyects/literalura.png";
 import forohub from "../../public/assets/proyects/forohub.png";
-
+import checaTraspasos from "../../public/assets/proyects/checaTraspasos.png";
 const Proyectos: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language as "en" | "es"];
@@ -27,6 +27,16 @@ const Proyectos: React.FC = () => {
         <h2 className="m-4 w-[288px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
           {t.projects.experiencia_profesional}
         </h2>
+        <Experiencia
+          infoCard={checaTraspasos}
+          titleDescription={t.projects.verificador_traspasos}
+          propWidth="auto"
+          propHeight="500px"
+          propAlignSelf="center"
+          imagePosition="left"
+          repoLink="https://github.com/Fernandofcsp/checaTraspasos"
+          demoLink="https://fernandofcsp.github.io/checaTraspasos/"
+        />
         <Experiencia
           infoCard={guitarPage}
           titleDescription={t.projects.pagina_web_cursos}

@@ -8,6 +8,7 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Professional Experience",
+      verificador_traspasos: "Transfer Verifier",
       pagina_web_cursos: "Web Page Courses",
       juego_plataformas_unity: "Unity Platform Game",
       encriptador_texto: "Text Encryptor",
@@ -84,6 +85,7 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Experiencia Profesional",
+      verificador_traspasos: "Verificador de Traspasos",
       pagina_web_cursos: "Página Web de Cursos",
       juego_plataformas_unity: "Juego de Plataformas en Unity",
       encriptador_texto: "Encriptador de Texto",
