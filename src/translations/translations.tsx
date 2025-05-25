@@ -8,6 +8,7 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Professional Experience",
+      verificador_preciosB9: "Price Verifier B9",
       verificador_traspasos: "Transfer Verifier",
       pagina_web_cursos: "Web Page Courses",
       juego_plataformas_unity: "Unity Platform Game",
@@ -85,6 +86,7 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Experiencia Profesional",
+      verificador_preciosB9: "Verificador de Precios B9",
       verificador_traspasos: "Verificador de Traspasos",
       pagina_web_cursos: "Página Web de Cursos",
       juego_plataformas_unity: "Juego de Plataformas en Unity",

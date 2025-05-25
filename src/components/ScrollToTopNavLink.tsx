@@ -1,4 +1,4 @@
-import { NavLink, NavLinkProps } from "react-router-dom";
+import { NavLink, NavLinkProps, useLocation } from "react-router-dom";
 import React, { useState } from "react";
 
 interface ScrollToTopNavLinkProps extends NavLinkProps {
@@ -12,12 +12,14 @@ const ScrollToTopNavLink: React.FC<ScrollToTopNavLinkProps> = ({
   ...rest
 }) => {
   const [isScrolling, setIsScrolling] = useState(false);
+  const location = useLocation();
 
-  const handleClick = () => {
-    if (!isScrolling) {
+  const handleClick = (_e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // Solo hace scroll si la ruta es diferente
+    if (location.pathname !== to && !isScrolling) {
       setIsScrolling(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
-      setTimeout(() => setIsScrolling(false), 500); // Asegura que el estado se restablezca después de 500ms
+      setTimeout(() => setIsScrolling(false), 500);
     }
   };
 

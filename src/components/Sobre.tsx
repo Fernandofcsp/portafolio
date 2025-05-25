@@ -20,7 +20,7 @@ const Sobre: FunctionComponent<SobreType> = ({
   propHeight,
 }) => {
   const { language } = useLanguage();
-  const t = translations[language as 'en' | 'es'];
+  const t = translations[language as "en" | "es"];
   const sobreStyle: CSSProperties = useMemo(() => {
     return {
       padding: propPadding,
@@ -59,18 +59,15 @@ const Sobre: FunctionComponent<SobreType> = ({
         <div className="self-stretch relative whitespace-pre-wrap mb-3">
           {t.social.sobre.description}
         </div>
-        <p className="m-0 ">
-          {t.social.sobre.passion}
-        </p>
+        <p className="m-0 ">{t.social.sobre.passion}</p>
         <img
-          className="dark:invert-0 grayscale w-[140px] h-[52px] relative bottom-0 object-cover mt-4"
+          className="dark:invert grayscale w-[140px] h-[52px] relative bottom-0 object-cover mt-4"
           loading="lazy"
-          
           alt=""
           src={firma}
         />
         <TypeAnimation
-          key={language}  // This key will force the component to re-render when the language changes
+          key={language} // This key will force the component to re-render when the language changes
           className="italic mt-6 text-xl text-center"
           sequence={[
             t.social.sobre.quote,

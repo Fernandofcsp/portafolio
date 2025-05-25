@@ -10,6 +10,7 @@ import conversorMonedas from "../../public/assets/proyects/conversorMonedas.gif"
 import literalura from "../../public/assets/proyects/literalura.png";
 import forohub from "../../public/assets/proyects/forohub.png";
 import checaTraspasos from "../../public/assets/proyects/checaTraspasos.png";
+import verificadorPreciosB9 from "../../public/assets/proyects/verificadorPreciosB9.png";
 const Proyectos: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language as "en" | "es"];
@@ -27,6 +28,16 @@ const Proyectos: React.FC = () => {
         <h2 className="m-4 w-[288px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
           {t.projects.experiencia_profesional}
         </h2>
+        <Experiencia
+          infoCard={verificadorPreciosB9}
+          titleDescription={t.projects.verificador_preciosB9}
+          propWidth="auto"
+          propHeight="500px"
+          propAlignSelf="center"
+          imagePosition="left"
+          repoLink="https://github.com/Fernandofcsp/verificadorPreciosB9"
+          demoLink="https://fernandofcsp.github.io/verificadorPreciosB9/"
+        />
         <Experiencia
           infoCard={checaTraspasos}
           titleDescription={t.projects.verificador_traspasos}
