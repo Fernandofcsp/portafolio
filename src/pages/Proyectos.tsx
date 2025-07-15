@@ -44,7 +44,7 @@ const Proyectos: React.FC = () => {
           propWidth="auto"
           propHeight="500px"
           propAlignSelf="center"
-          imagePosition="left"
+          imagePosition="right"
           repoLink="https://github.com/Fernandofcsp/checaTraspasos"
           demoLink="https://fernandofcsp.github.io/checaTraspasos/"
         />
