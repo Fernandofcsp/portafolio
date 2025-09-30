@@ -8,9 +8,8 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Professional Experience",
-      verificador_preciosB9: "Price Verifier B9",
+      verificador_preciosB9: "Product, promotion and price inquiry API",
       verificador_traspasos: "Transfer Verifier",
-      pagina_web_cursos: "Web Page Courses",
       juego_plataformas_unity: "Unity Platform Game",
       encriptador_texto: "Text Encryptor",
       erp_finance_bond: "ERP Finance Bond",
@@ -86,9 +85,8 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Experiencia Profesional",
-      verificador_preciosB9: "Verificador de Precios B9",
+      verificador_preciosB9: "API de consulta de productos, promociones y precios",
       verificador_traspasos: "Verificador de Traspasos",
-      pagina_web_cursos: "Página Web de Cursos",
       juego_plataformas_unity: "Juego de Plataformas en Unity",
       encriptador_texto: "Encriptador de Texto",
       erp_finance_bond: "ERP Finance Bond",

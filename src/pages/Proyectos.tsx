@@ -3,14 +3,13 @@ import Layout from "../components/Layout";
 import { useLanguage } from "../contexts/LanguageContext";
 import translations from "../translations/translations";
 import encryptText from "../../public/assets/proyects/encryptText.png";
-import guitarPage from "../../public/assets/proyects/guitarPage.png";
 import unityGame from "../../public/assets/proyects/juegoPlataformas2.png";
 import financeBond from "../../public/assets/proyects/financeBond.png";
 import conversorMonedas from "../../public/assets/proyects/conversorMonedas.gif";
 import literalura from "../../public/assets/proyects/literalura.png";
 import forohub from "../../public/assets/proyects/forohub.png";
 import checaTraspasos from "../../public/assets/proyects/checaTraspasos.png";
-import verificadorPreciosB9 from "../../public/assets/proyects/verificadorPreciosB9.png";
+import verificadorPreciosB9 from "../../public/assets/proyects/b9precios.gif";
 const Proyectos: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language as "en" | "es"];
@@ -35,8 +34,8 @@ const Proyectos: React.FC = () => {
           propHeight="500px"
           propAlignSelf="center"
           imagePosition="left"
-          repoLink="https://github.com/Fernandofcsp/verificadorPreciosB9"
-          demoLink="https://fernandofcsp.github.io/verificadorPreciosB9/"
+          repoLink="https://github.com/Fernandofcsp/B9Precios"
+          demoLink="https://fernandofcsp.github.io/B9Precios/"
         />
         <Experiencia
           infoCard={checaTraspasos}
@@ -47,16 +46,6 @@ const Proyectos: React.FC = () => {
           imagePosition="right"
           repoLink="https://github.com/Fernandofcsp/checaTraspasos"
           demoLink="https://fernandofcsp.github.io/checaTraspasos/"
-        />
-        <Experiencia
-          infoCard={guitarPage}
-          titleDescription={t.projects.pagina_web_cursos}
-          propWidth="auto"
-          propHeight="500px"
-          propAlignSelf="center"
-          imagePosition="left"
-          repoLink="https://github.com/Fernandofcsp/guitarPage"
-          demoLink="https://projectingsoftvicguitar.free.nf/"
         />
         <Experiencia
           infoCard={unityGame}
