@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "../components/Layout";
@@ -81,15 +81,16 @@ export const Contacto = () => {
       });
     }
   };
-  const handleDivLoad = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll instantáneo al cargar
+  }, []);
+
   const { language } = useLanguage();
   const t = translations[language as "en" | "es"];
   return (
     <Layout>
       <div
-        onLoad={handleDivLoad}
         className="dark:bg-[#21242b] w-full relative bg-preto-05 overflow-hidden  "
       >
         <div className="dark:bg-gray-700 items-center justify-center mt-20 mb-10 flex  md:flex-row mq450:flex-col mq750:flex-col bg-blue-100 p-8 box-border gap-8">

@@ -8,7 +8,7 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Professional Experience",
-      verificador_preciosB9: "Product, promotion and price inquiry API",
+      verificador_preciosB9: "Price Verifier Back9 Golf:\nConnection to API for querying products, promotions, prices and sales report",
       verificador_traspasos: "Transfer Verifier",
       juego_plataformas_unity: "Unity Platform Game",
       encriptador_texto: "Text Encryptor",
@@ -85,7 +85,7 @@ const translations = {
     },
     projects: {
       experiencia_profesional: "Experiencia Profesional",
-      verificador_preciosB9: "API de consulta de productos, promociones y precios",
+      verificador_preciosB9: "Verificador de Precios Back9 Golf:\nConexión a API para consulta de productos, promociones, precios y reportes de ventas",
       verificador_traspasos: "Verificador de Traspasos",
       juego_plataformas_unity: "Juego de Plataformas en Unity",
       encriptador_texto: "Encriptador de Texto",

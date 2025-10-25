@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import DocumentCert from "../components/DocumentCert";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -11,16 +12,17 @@ import projectManagement from "../../public/assets/certifications/SkillsBuild_Pr
 import javaPoo from "../../public/assets/certifications/JavaOrientadoaObjetos.png";
 import javaSpringBoot from "../../public/assets/certifications/JavaSpringBoot.png";
 import programaOne from "../../public/assets/certifications/ProgramaOne.png";
+
 export const Certificaciones = () => {
-  const handleDivLoad = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll instantáneo al cargar
+  }, []);
+
   const { language } = useLanguage();
   const t = translations[language as "en" | "es"];
   return (
     <Layout>
       <div
-        onLoad={handleDivLoad}
         className="dark:bg-[#21242b] dark:text-white bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway"
       >
         <h2 className="m-4 w-[248px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">

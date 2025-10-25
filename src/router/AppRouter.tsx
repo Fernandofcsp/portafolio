@@ -8,6 +8,7 @@ export const AppRouter = () => {
     <Routes>
       {/* Página principal */}
       <Route path="/" element={<Home />} />
+      <Route path="/Home" element={<Home />} />
       {/* Contacto */}
       <Route path="/contacto" element={<Contacto />} />
       {/* Proyectos */}
@@ -15,9 +16,8 @@ export const AppRouter = () => {
       {/* Certificaciones */}
       <Route path="/certificaciones" element={<Certificaciones />} />
 
-
-      {/* <Route path="*" element={<NotFoundPage />} /> */}
-      <Route path="/*" element={<Navigate to="/" />} />
+      {/* Redirección para rutas no encontradas */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

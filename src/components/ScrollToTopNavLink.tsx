@@ -18,8 +18,8 @@ const ScrollToTopNavLink: React.FC<ScrollToTopNavLinkProps> = ({
     // Solo hace scroll si la ruta es diferente
     if (location.pathname !== to && !isScrolling) {
       setIsScrolling(true);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      setTimeout(() => setIsScrolling(false), 500);
+      window.scrollTo(0, 0); // Scroll instantáneo
+      setTimeout(() => setIsScrolling(false), 100);
     }
   };
 

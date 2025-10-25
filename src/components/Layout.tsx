@@ -10,16 +10,16 @@ const Layout = ({ children }: IProps) => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
-    const handleMediaQueryChange = (e: any) => {
+    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
       setIsSmallScreen(e.matches);
     };
 
-    handleMediaQueryChange(mediaQuery); // Establecer el estado inicial basado en el tamaño de la pantalla
+    handleMediaQueryChange(mediaQuery as any); // Establecer el estado inicial basado en el tamaño de la pantalla
 
-    mediaQuery.addListener(handleMediaQueryChange); // Escuchar los cambios en el tamaño de la pantalla
+    mediaQuery.addEventListener('change', handleMediaQueryChange); // Escuchar los cambios en el tamaño de la pantalla
 
     return () => {
-      mediaQuery.removeListener(handleMediaQueryChange); // Limpiar el listener al desmontar el componente
+      mediaQuery.removeEventListener('change', handleMediaQueryChange); // Limpiar el listener al desmontar el componente
     };
   }, []);
 

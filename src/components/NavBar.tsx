@@ -73,7 +73,7 @@ const NavBar = ({ isSmallScreen }: Props) => {
             className="dark:text-white dark:hover:bg-gray-700 hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-20 py-2 px-4"
             onClick={() => {
               toggleMenu();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo(0, 0); // Scroll instantáneo
             }}
           >
             {navTranslations.projects}
@@ -83,7 +83,7 @@ const NavBar = ({ isSmallScreen }: Props) => {
             className="dark:text-white dark:hover:bg-gray-700 hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-24 py-2 px-4"
             onClick={() => {
               toggleMenu();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo(0, 0); // Scroll instantáneo
             }}
           >
             {navTranslations.certifications}
@@ -93,7 +93,7 @@ const NavBar = ({ isSmallScreen }: Props) => {
             className="dark:text-white dark:hover:bg-gray-700 hover:bg-gray-200 rounded-md text-preto-100 relative font-medium inline-block w-20 py-2 px-4"
             onClick={() => {
               toggleMenu();
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo(0, 0); // Scroll instantáneo
             }}
           >
             {navTranslations.contact}

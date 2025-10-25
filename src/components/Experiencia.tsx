@@ -69,7 +69,7 @@ const Experiencia: FunctionComponent<ExperienciaProps> = ({
       </div>
       
       <div className="flex flex-col items-start justify-center gap-4 md:w-1/2">
-        <a className="relative" >{titleDescription}</a>
+        <a className="relative whitespace-pre-line text-justify" >{titleDescription}</a>
         <div className="flex flex-row justify-center gap-4">
           <a
             href={repoLink}

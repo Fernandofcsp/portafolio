@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Experiencia from "../components/Experiencia";
 import Layout from "../components/Layout";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -10,18 +11,18 @@ import literalura from "../../public/assets/proyects/literalura.png";
 import forohub from "../../public/assets/proyects/forohub.png";
 import checaTraspasos from "../../public/assets/proyects/checaTraspasos.png";
 import verificadorPreciosB9 from "../../public/assets/proyects/b9precios.gif";
+
 const Proyectos: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language as "en" | "es"];
 
-  const handleDivLoad = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll instantáneo al cargar
+  }, []);
 
   return (
     <Layout>
       <div
-        onLoad={handleDivLoad}
         className="dark:bg-[#21242b] dark:text-white bg-preto-05 mt-10 self-stretch flex flex-col items-center justify-between p-8 box-border gap-[16px] max-w-full text-center text-3xl text-preto-100 font-raleway"
       >
         <h2 className="m-4 w-[288px] relative text-inherit font-bold font-inherit inline-block mq450:text-lg">
@@ -35,7 +36,7 @@ const Proyectos: React.FC = () => {
           propAlignSelf="center"
           imagePosition="left"
           repoLink="https://github.com/Fernandofcsp/B9Precios"
-          demoLink="https://fernandofcsp.github.io/B9Precios/"
+          demoLink="https://b9precios.netlify.app/"
         />
         <Experiencia
           infoCard={checaTraspasos}
